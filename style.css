@@ -183,12 +183,19 @@ a:hover {
     margin: 0 auto 2rem;
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens before the mobile breakpoint */
+    gap: 20px; /* Replaces margin on individual buttons */
+}
+
 .btn {
     padding: 12px 24px;
     border-radius: 5px;
     font-weight: 600;
     transition: all 0.3s ease;
-    margin: 0 10px;
 }
 
 .primary {
@@ -268,19 +275,21 @@ a:hover {
 }
 
 .skills-grid {
+    list-style: none;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     text-align: center;
 }
 
-.skills-grid span {
+.skills-grid li {
     background-color: var(--surface-color);
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.skills-grid span:hover {
+.skills-grid li:hover {
     transform: translateY(-3px);
     background-color: var(--primary-color);
     color: var(--heading-color);
@@ -312,6 +321,33 @@ a:hover {
 /* --- Contact & Footer --- */
 #contact {
     text-align: center;
+}
+
+#contact p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 footer {
@@ -368,7 +404,6 @@ footer {
     }
 
     .hero-buttons {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem; /* Adds space between the stacked buttons */
